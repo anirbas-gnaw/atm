@@ -37,7 +37,8 @@ atm.c: Implementation of the ATM controller.  atm tracks the state of an ATM. Fo
 
 bank.c: simple bank API for testing.  A bank is a collection of multiple users.  The bank can have at max 10 users.  This can be changed in the bank struct in bank.h.  Currently, creating a bank will create a 2 user bank with:
   - user card number 101      password 11
-  - user card number 102      password 22  
+  - user card number 102      password 22
+
 with all accounts initialized to 0.  This can be changed by changing the `bank_get` function.
 
 user.c: simple API represnting a user for testing purposes.  A user has a card number, a checking account, and a savings account.  
@@ -53,16 +54,16 @@ ui.c: console UI for testing.  This contains the main control flow for using the
 To test the ATM using the APIs provided, run `make run` from the console.  This will open up an ATM to the waiting state.  Type `quit` at any point to close
 
 ### Example test 1:
-ATM> cardin 101
-ATM> verify 11
-ATM> checking
-ATM> balance
-Balance: 0
-ATM> deposit 10
-New balance: 10
-ATM> done
-ATM> saving
-ATM> balance
-Balance: 0
-ATM> cardout
-ATM> quit
+        ATM> cardin 101
+        ATM> verify 11
+        ATM> checking
+        ATM> balance
+        Balance: 0
+        ATM> deposit 10
+        New balance: 10
+        ATM> done
+        ATM> saving
+        ATM> balance
+        Balance: 0
+        ATM> cardout
+        ATM> quit
